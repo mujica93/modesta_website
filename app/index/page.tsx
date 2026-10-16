@@ -1,9 +1,5 @@
-import { HomePage } from "@/components/home-page"
+import { redirect } from "next/navigation"
 
 export default function IndexPage() {
-  return (
-    <main className="min-h-screen bg-background">
-      <HomePage />
-    </main>
-  )
+  redirect("/")
 }

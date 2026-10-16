@@ -79,7 +79,7 @@ export const HOME_QUICK_LINKS: QuickLink[] = [
   {
     id: "interview",
     label: { es: "Solicitud de Entrevista", en: "Request Interview" },
-    href: "https://docs.google.com/forms/d/e/1FAIpQLSfuhXww4ANlA0j8kMAaFB4b_N0FuJvzjn57WQP4UEw_fvnCYg/viewform",
+    href: Link.INTERVIEW_REQUEST,
     external: true,
     icon: MessageSquare,
   },

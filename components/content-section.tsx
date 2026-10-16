@@ -1,5 +1,6 @@
 "use client"
 
+import Image from "next/image"
 import Link from "next/link"
 import { ExternalLink } from "lucide-react"
 import { buttonVariants } from "@/components/ui/button"
@@ -64,8 +65,14 @@ export function ContentSection({ block, variant = "default" }: ContentSectionPro
         </div>
       ) : null}
       {image ? (
-        <div className="mt-6">
-          <img src={image} alt={block.title[lang]} className="w-full h-auto" />
+        <div className="relative mt-6 aspect-[16/10] w-full overflow-hidden rounded-xl border border-border">
+          <Image
+            src={image}
+            alt={block.title[lang]}
+            fill
+            className="object-cover"
+            sizes="(max-width: 768px) 100vw, 720px"
+          />
         </div>
       ) : null}
     </article>

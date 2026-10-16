@@ -9,7 +9,8 @@ type Dict = Record<string, { es: string; en: string }>
 const DICT: Dict = {
   "site.school": { es: "U.E. Colegio Modesta Bor", en: "Modesta Bor School" },
   "site.tagline": { es: "La Casa de los Saberes", en: "The House of Knowledge" },
-  "hero.badge": { es: "Año Escolar 2025 – 2026", en: "School Year 2025 – 2026" },
+  "hero.badge": { es: "Año Escolar", en: "School Year" },
+  "nav.menu": { es: "Abrir menú", en: "Open menu" },
   "hero.title": { es: "Lista de Útiles Escolares", en: "School Supplies List" },
   "hero.subtitle": {
     es: "Consulta y descarga la lista de textos y útiles sugeridos para cada nivel y grado de nuestra institución.",

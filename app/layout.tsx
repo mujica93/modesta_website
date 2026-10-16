@@ -22,15 +22,7 @@ export const metadata: Metadata = {
     icon: [
       {
         url: '/images/emblema-modesta-bor.png',
-        media: '(prefers-color-scheme: light)',
-      },
-      {
-        url: '/images/emblema-modesta-bor.png',
-        media: '(prefers-color-scheme: dark)',
-      },
-      {
-        url: '/images/emblema-modesta-bor.png',
-        type: 'image/svg+xml',
+        type: 'image/png',
       },
     ],
     apple: '/images/emblema-modesta-bor.png',

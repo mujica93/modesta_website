@@ -4,17 +4,13 @@ import Image from "next/image"
 import { GraduationCap, Printer, ArrowDown } from "lucide-react"
 import { buttonVariants } from "@/components/ui/button"
 import { useLang } from "@/lib/i18n"
+import { getSchoolYearLabel, getSchoolYearShortLabel } from "@/lib/school-year"
 import { GRADES, LEVELS } from "@/lib/supplies-data"
 
 export function Hero() {
-
   const { t } = useLang()
-
-
-  const currentYear = new Date().getFullYear()
-  const previousYear = currentYear - 1
-  const previousYearDigits = previousYear.toString()
-  const year = `${previousYearDigits}-${currentYear.toString().slice(-2)}`
+  const year = getSchoolYearShortLabel()
+  const schoolYear = getSchoolYearLabel()
 
   const stats = [
     { value: String(GRADES.length), label: t("stats.grades") },
@@ -33,7 +29,7 @@ export function Hero() {
         <div className="flex flex-col gap-6">
           <span className="inline-flex w-fit items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-3 py-1 text-xs font-semibold text-primary">
             <GraduationCap className="h-3.5 w-3.5" />
-            {t("hero.badge")}
+            {t("hero.badge")} {schoolYear}
           </span>
           <h1 className="text-balance text-4xl font-bold tracking-tight text-foreground sm:text-5xl font-heading">
             {t("hero.title")}
